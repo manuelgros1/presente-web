@@ -652,6 +652,17 @@ strong { color: var(--color-text); font-weight: 600; }
 
 .competencia-card p { font-size: 0.9rem; }
 
+.equipo__subfila {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.equipo__grid--founders {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 /* =============================================
    PHOTO BREAK
    ============================================= */
