@@ -1,7 +1,24 @@
 /* =========================================
    PRESENTE — Landing Page Styles
-   Dark theme · Purple accents · Playfair + Inter
+   Dark theme · Purple accents · Geologica
    ========================================= */
+
+/* ----- FUENTES LOCALES ----- */
+@font-face {
+  font-family: 'Geologica';
+  src: url('fonts/Geologica-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geologica';
+  src: url('fonts/Geologica-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ----- CUSTOM PROPERTIES ----- */
 :root {
@@ -11,28 +28,28 @@
   --color-surface:    #1e1e2e;
   --color-surface-2:  #252538;
 
-  --color-primary:    #7c6bdc;
-  --color-primary-light: #9d8ff0;
-  --color-primary-dark:  #5c4fb8;
-  --color-accent:     #c4a882;
-  --color-accent-warm: #e8c49a;
+  --color-primary:    #736CCC;
+  --color-primary-light: #9589d9;
+  --color-primary-dark:  #4C4A8A;
+  --color-accent:     #FF9128;
+  --color-accent-warm: #FFB060;
 
   --color-text:       #e8e8f0;
   --color-text-muted: #9090a8;
   --color-text-faint: #5a5a72;
 
-  --color-border:     rgba(124, 107, 220, 0.18);
+  --color-border:     rgba(115, 108, 204, 0.18);
   --color-border-subtle: rgba(255, 255, 255, 0.06);
 
-  --font-serif:   'Playfair Display', Georgia, serif;
-  --font-sans:    'Inter', system-ui, sans-serif;
+  --font-serif:   'Geologica', Georgia, serif;
+  --font-sans:    'Geologica', system-ui, sans-serif;
 
   --radius-sm:    8px;
   --radius-md:    16px;
   --radius-lg:    24px;
   --radius-xl:    40px;
 
-  --shadow-glow:  0 0 40px rgba(124, 107, 220, 0.25);
+  --shadow-glow:  0 0 40px rgba(115, 108, 204, 0.25);
   --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.4);
 
   --transition:   all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -68,9 +85,9 @@ h1, h2, h3 {
   color: var(--color-text);
 }
 
-h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 600; }
-h2 { font-size: clamp(1.8rem, 3.5vw, 2.75rem); font-weight: 600; }
-h3 { font-size: 1.25rem; font-weight: 600; }
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 300; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.75rem); font-weight: 300; }
+h3 { font-size: 1.25rem; font-weight: 400; }
 
 em { font-style: italic; color: var(--color-primary-light); }
 
@@ -125,12 +142,12 @@ strong { color: var(--color-text); font-weight: 600; }
 .btn--primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: #fff;
-  box-shadow: 0 4px 20px rgba(124, 107, 220, 0.4);
+  box-shadow: 0 4px 20px rgba(115, 108, 204, 0.4);
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(124, 107, 220, 0.55);
+  box-shadow: 0 8px 30px rgba(115, 108, 204, 0.55);
 }
 
 .btn--ghost {
@@ -254,8 +271,8 @@ strong { color: var(--color-text); font-weight: 600; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(124, 107, 220, 0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 80% at 10% 80%, rgba(196, 168, 130, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(115, 108, 204, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 80% at 10% 80%, rgba(255, 145, 40, 0.08) 0%, transparent 60%),
     var(--color-bg);
 }
 
@@ -455,7 +472,7 @@ strong { color: var(--color-text); font-weight: 600; }
 
 .app-card--active {
   border-color: var(--color-primary);
-  background: rgba(124, 107, 220, 0.12);
+  background: rgba(115, 108, 204, 0.12);
   color: var(--color-primary-light);
 }
 
@@ -643,8 +660,8 @@ strong { color: var(--color-text); font-weight: 600; }
   display: block;
 }
 
-.icon-vincular  { color: #7c6bdc; }
-.icon-formar    { color: #c4a882; }
+.icon-vincular  { color: #736CCC; }
+.icon-formar    { color: #FF9128; }
 .icon-cuidar    { color: #dc6b9d; }
 .icon-reflexionar { color: #6bbfdc; }
 
@@ -848,7 +865,7 @@ blockquote {
 
 .waitlist-form input[type="email"]:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(124, 107, 220, 0.15);
+  box-shadow: 0 0 0 3px rgba(115, 108, 204, 0.15);
 }
 
 .form-note {
@@ -859,7 +876,7 @@ blockquote {
 .form-success {
   margin-top: 0.75rem;
   padding: 0.75rem 1rem;
-  background: rgba(124, 107, 220, 0.12);
+  background: rgba(115, 108, 204, 0.12);
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-sm);
   color: var(--color-primary-light);
